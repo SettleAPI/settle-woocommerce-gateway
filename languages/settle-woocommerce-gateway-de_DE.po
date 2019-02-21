@@ -1,0 +1,242 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Settle - WooCommerce Gateway v0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2015-04-22 15:37:05+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: classes/settle-woocommerce.php:19
+#: classes/settle-woocommerce.php:21
+#@ settle-woocommerce-gateway
+msgid "Settle"
+msgstr "Settle"
+
+#: classes/settle-woocommerce.php:20
+#@ settle-woocommerce-gateway
+msgid "Settle Payment Gateway Plug-in for WooCommerce"
+msgstr "Settle Payment Gateway Plug-in für WooCommerce"
+
+#: classes/settle-woocommerce.php:164
+#@ settle-woocommerce-gateway
+msgid "Enable / Disable"
+msgstr "Aktivieren / Deaktivieren"
+
+#: classes/settle-woocommerce.php:165
+#@ settle-woocommerce-gateway
+msgid "Enable this payment gateway"
+msgstr "Aktivieren / Inaktivieren"
+
+#: classes/settle-woocommerce.php:170
+#@ settle-woocommerce-gateway
+msgid "Title"
+msgstr "Titel"
+
+#: classes/settle-woocommerce.php:172
+#@ settle-woocommerce-gateway
+msgid "Payment title the customer will see during the checkout process."
+msgstr "Titel sichtbar für den Kunden während des Zahlungsvorgangs"
+
+#: classes/settle-woocommerce.php:176
+#@ settle-woocommerce-gateway
+msgid "Description"
+msgstr "Beschreibung"
+
+#: classes/settle-woocommerce.php:178
+#@ settle-woocommerce-gateway
+msgid "Payment description the customer will see during the checkout process."
+msgstr "Beschreibung sichtbar für den Kunden während des Zahlungsvorgangs"
+
+#: classes/settle-woocommerce.php:179
+#, php-format
+#@ settle-woocommerce-gateway
+msgid "Pay with %s"
+msgstr "Zahlung mit %s"
+
+#: classes/settle-woocommerce.php:183
+#@ settle-woocommerce-gateway
+msgid "merchant id"
+msgstr "Händler-ID"
+
+#: classes/settle-woocommerce.php:185
+#, php-format
+#@ settle-woocommerce-gateway
+msgid "This is the merchant id that was provided by Settle when you signed up for an account at %shttps://business.settle.eu/%s ."
+msgstr "Händler-ID, die von Settle während der Eröffnung eines Händlerkontos im Settle-Portal  %shttps://business.settle.eu/%s bereit gestellt wurde."
+
+#: classes/settle-woocommerce.php:188
+#@ settle-woocommerce-gateway
+msgid "merchant user id"
+msgstr "Händler-User-ID"
+
+#: classes/settle-woocommerce.php:190
+#, php-format
+#@ settle-woocommerce-gateway
+msgid "The merchant user created by you at %shttps://business.settle.eu/%s ."
+msgstr "Händler-User-ID, die von Ihnen im Settle-Portal %shttps://business.settle.eu/%s erzeugt wurde."
+
+#: classes/settle-woocommerce.php:193
+#: classes/settle-woocommerce.php:194
+#@ settle-woocommerce-gateway
+msgid "Generate new RSA keys"
+msgstr "Neuen RSA-Schlüssel erzeugen"
+
+#: classes/settle-woocommerce.php:196
+#, php-format
+#@ settle-woocommerce-gateway
+msgid "If set to \"yes\", new keys will be generated, and you need to copy the public key to %shttps://business.settle.eu/%s ."
+msgstr "Wenn Einstellung “ja” aktiviert ist, wird eine neue Verschlüsselung erzeugt. Der öffentliche Schlüssel muss in das Settle-Portal kopiert werden: %shttps://business.settle.eu/%s ."
+
+#: classes/settle-woocommerce.php:200
+#@ settle-woocommerce-gateway
+msgid "Private RSA key"
+msgstr "Privater RSA-Schlüssel"
+
+#: classes/settle-woocommerce.php:202
+#@ settle-woocommerce-gateway
+msgid "Your private RSA key. Keep it secret."
+msgstr "Privater RSA-Schlüssel - muss geheim gehalten werden"
+
+#: classes/settle-woocommerce.php:206
+#@ settle-woocommerce-gateway
+msgid "Public RSA key"
+msgstr "Öffenticher RSA-Schlüssel"
+
+#: classes/settle-woocommerce.php:208
+#, php-format
+#@ settle-woocommerce-gateway
+msgid "Your public RSA key. Copy this to the corresponding field for your merchant user at %shttps://business.settle.eu/%s ."
+msgstr "Öffentlicher RSA-Schlüssel - muss in das entsprechende Feld Ihres Händer-Users kopiert werden: %shttps://business.settle.eu/%s ."
+
+#: classes/settle-woocommerce.php:212
+#@ settle-woocommerce-gateway
+msgid "autocapture"
+msgstr "Automatischer Capture"
+
+#: classes/settle-woocommerce.php:213
+#@ settle-woocommerce-gateway
+msgid "Capture an authorized payment automatically"
+msgstr "Automatischer Abschluss (Capture) einer vorautorisierten Zahlung"
+
+#: classes/settle-woocommerce.php:215
+#@ settle-woocommerce-gateway
+msgid "Capture an authorized payment automatically. If not set, capture needs to be done in the order view."
+msgstr "Automatischer Abschluss (Capture) einer vorautorisierten Zahlung. Falls dieses Feature nicht aktiviert ist, müssen alle vorautorisierten Zahlungen manuell in der Bestellansicht mit einem Capture abgeschlossen werden."
+
+#: classes/settle-woocommerce.php:219
+#@ settle-woocommerce-gateway
+msgid "Test Mode"
+msgstr "Testmodus"
+
+#: classes/settle-woocommerce.php:220
+#@ settle-woocommerce-gateway
+msgid "Enable Test Mode"
+msgstr "Aktivieren testmodus"
+
+#: classes/settle-woocommerce.php:222
+#@ settle-woocommerce-gateway
+msgid "Place the payment gateway in test mode."
+msgstr ""
+
+#: classes/settle-woocommerce.php:226
+#@ settle-woocommerce-gateway
+msgid "Log Mode"
+msgstr ""
+
+#: classes/settle-woocommerce.php:227
+#@ settle-woocommerce-gateway
+msgid "Enable logging"
+msgstr ""
+
+#: classes/settle-woocommerce.php:232
+#@ settle-woocommerce-gateway
+msgid "testbed_token"
+msgstr "testbed_token"
+
+#: classes/settle-woocommerce.php:234
+#, php-format
+#@ settle-woocommerce-gateway
+msgid "When using Settle %stest environment%s , this token needs to be set"
+msgstr ""
+
+#: classes/settle-woocommerce.php:238
+#@ settle-woocommerce-gateway
+msgid "test_server"
+msgstr "test_server"
+
+#: classes/settle-woocommerce.php:242
+#@ settle-woocommerce-gateway
+msgid "Only concerns developers"
+msgstr "Nur Bedenken Entwickler"
+
+#: classes/settle-woocommerce.php:282
+#@ settle-woocommerce-gateway
+msgid "Gateway Disabled"
+msgstr ""
+
+#: classes/settle-woocommerce.php:282
+#@ settle-woocommerce-gateway
+msgid "Settle does not support your store currency."
+msgstr "Settle Zahlungen werden momentan nicht in der Währung ihres Webshops unterstützt."
+
+#: classes/settle-woocommerce.php:338
+#@ settle-woocommerce-gateway
+msgid "Settle manual capture completed"
+msgstr "Settle manueller Capture erfolgreich abgeschlossen"
+
+#: classes/settle-woocommerce.php:344
+#: classes/settle-woocommerce.php:345
+#@ settle-woocommerce-gateway
+msgid "Settle manual capture failed"
+msgstr "Settle manueller Capture fehlgeschlagen"
+
+#: classes/settle-woocommerce.php:363
+#, php-format
+#@ default
+msgid "<strong>%s</strong> is enabled and WooCommerce is not forcing the SSL certificate on your checkout page. Please ensure that you have a valid SSL certificate and that you are <a href=\"%s\">forcing the checkout pages to be secured.</a>"
+msgstr "<strong>%s</strong> ist aktiviert, doch das notwendige SSL-Sertifikat zur Sicherung Ihrer Bezahlungslösung wird nicht von WooCommerce bereit gestellt. Bitte versichern Sie sich deshalb, ob Sie über ein gültiges SSL-Sertifikat verfügen und Ihrer Bezahlungslösung hiermit gesichert ist. <a href=\"%s\"> </a>"
+
+#: classes/settle-woocommerce.php:425
+#@ settle-woocommerce-gateway
+msgid "Settle payment status : auth "
+msgstr "Settle Transaktionsstatus: auth "
+
+#: classes/settle-woocommerce.php:428
+#@ settle-woocommerce-gateway
+msgid "Settle automatic capture completed"
+msgstr "Settle automatischer Capture erfolgreich abgeschlossen"
+
+#: classes/settle-woocommerce.php:432
+#@ settle-woocommerce-gateway
+msgid "Settle automatic capture failed"
+msgstr "Settle automatischer Capture fehlgeschlagen"
+
+#: classes/settle-woocommerce.php:433
+#@ settle-woocommerce-gateway
+msgid "Settle capture failed"
+msgstr "Settle Capture fehlgeschlagen"
+
+#: classes/settle-woocommerce.php:456
+#@ settle-woocommerce-gateway
+msgid "We are currently experiencing problems trying to connect to this payment gateway. Sorry for the inconvenience."
+msgstr "Wir haben leider im Moment Probleme damit, das Payment Gateway zu erreichen. Wir möchten uns für alle eventuelle Unannehmlichkeiten entschuldigen."
+
+#: settle-woocommerce-gateway.php:61
+#@ settle-woocommerce-gateway
+msgid "Settings"
+msgstr "Einstellungen"
+
