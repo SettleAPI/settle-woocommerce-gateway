@@ -61,10 +61,11 @@ AwIDAQAB
                                  $required_scope=null
         ) {
             $url = $this->settle_server . "/merchant/v1/payment_request/";
+            $integerAmount = $amount * 100;
             $payload = array(
                 'success_return_uri' => $success_return_uri,
                 'failure_return_uri' => $failure_return_uri,
-                'amount'             => $amount,
+                'amount'             => $integerAmount,
                 'currency'           => $currency,
                 'text'               => $text,
                 'pos_id'             => $pos_id,
@@ -116,12 +117,13 @@ AwIDAQAB
         {
             $url = $this->settle_server . "/merchant/v1/payment_request/" . $settle_tid . "/";
             $method = 'PUT';
+            $integerAmount = $amount * 100;
             $payload = array(
                 'action'            => 'refund',
                 'refund_id'         => strval($settle_refund_id),
                 'currency'          => get_woocommerce_currency(),
-                'amount'            => $amount,
-                'additional_amount' => '0.00',
+                'amount'            => $integerAmount,
+                'additional_amount' => '0',
                 'text'              => $text
             );
             return $this->settle_merchant_call(
@@ -231,7 +233,7 @@ AwIDAQAB
             $settleHeaders = array();
             foreach ($headers as $key => $value) {
                 $ucKey = strtoupper($key);
-                if (substr($ucKey, 0, 7) === "X-Mcash") {
+                if (substr($ucKey, 0, 7) === "X-MCASH") {
                     $settleHeaders[$ucKey] = $value;
                 }
             }

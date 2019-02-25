@@ -414,7 +414,8 @@ class Settle_Woocommerce extends WC_Payment_Gateway
         }
         $settle_refund_id++;
         update_post_meta($order_id, 'settle_refund_counter', $settle_refund_id);
-        $result = $this->settle_client->refund_payment($settle_tid, $settle_refund_id, $amount, $reason);
+        $integerAmount = $amount * 100;
+        $result = $this->settle_client->refund_payment($settle_tid, $settle_refund_id, $integerAmount, $reason);
         if($result['status'] == 204) {
             return true;
         }
