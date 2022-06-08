@@ -10,14 +10,14 @@ require  'settle-client.php' ;
 
 class Settle_Client_Test extends PHPUnit_Framework_TestCase
 {
-        const PUB_KEY = '-----BEGIN PUBLIC KEY-----
+        const SAMPLE_PUBLIC_KEY = '-----BEGIN PUBLIC KEY-----
 MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCfUDv8nt/RVvTdQ3sbgvz/j1L1
 Bc9ltic4RxnLd/EwyW/Kc/Jj0Mq4reFvfOuXJHEjMk9YqT2iByXzDBxS2jfAvA4f
 LZqnVzOsVyNp3rKmHtQbeGhH5omSqHsmR3epAS/365M0B1aima/7POhkzKJYOQfb
 6mOjJ/z2bxUKubdcYQIDAQAB
 -----END PUBLIC KEY-----';
 
-        const PRIV_KEY = '-----BEGIN RSA PRIVATE KEY-----
+        const SAMPLE_PRIVATE_KEY = '-----BEGIN RSA PRIVATE KEY-----
 MIICXAIBAAKBgQCfUDv8nt/RVvTdQ3sbgvz/j1L1Bc9ltic4RxnLd/EwyW/Kc/Jj
 0Mq4reFvfOuXJHEjMk9YqT2iByXzDBxS2jfAvA4fLZqnVzOsVyNp3rKmHtQbeGhH
 5omSqHsmR3epAS/365M0B1aima/7POhkzKJYOQfb6mOjJ/z2bxUKubdcYQIDAQAB
@@ -66,8 +66,8 @@ Dzsubiwvn5QzYKx3I8T9rJ2IzAGGFsfNFVcvFCXoOtI=
             ''
         );
 
-        $client->settle_public_key=self::PUB_KEY;
-        $this->assertTrue($client->get_settle_public_key()===self::PUB_KEY);
+        $client->settle_public_key=self::SAMPLE_PUBLIC_KEY;
+        $this->assertTrue($client->get_settle_public_key()===self::SAMPLE_PUBLIC_KEY);
 
         $method = 'POST';
         $payload = '';
@@ -87,7 +87,7 @@ Dzsubiwvn5QzYKx3I8T9rJ2IzAGGFsfNFVcvFCXoOtI=
         );
 
         $signature = $this->invokeMethod(
-            $client, 'sign', array($method, $url, $headers, self::PRIV_KEY)
+            $client, 'sign', array($method, $url, $headers, self::SAMPLE_PRIVATE_KEY)
         );
         $headers['Authorization'] = "RSA-SHA256 " . $signature;
         $return = $client->valid_signature($method, $url, $headers, $json_payload);
@@ -108,8 +108,8 @@ Dzsubiwvn5QzYKx3I8T9rJ2IzAGGFsfNFVcvFCXoOtI=
             ''
         );
 
-        $client->settle_public_key=self::PUB_KEY;
-        $this->assertTrue($client->get_settle_public_key()===self::PUB_KEY);
+        $client->settle_public_key=self::SAMPLE_PUBLIC_KEY;
+        $this->assertTrue($client->get_settle_public_key()===self::SAMPLE_PUBLIC_KEY);
 
         $method = 'POST';
         $payload = array(
@@ -134,7 +134,7 @@ Dzsubiwvn5QzYKx3I8T9rJ2IzAGGFsfNFVcvFCXoOtI=
         );
 
         $signature = $this->invokeMethod(
-            $client, 'sign', array($method, $url, $headers, self::PRIV_KEY)
+            $client, 'sign', array($method, $url, $headers, self::SAMPLE_PRIVATE_KEY)
         );
         $headers['Authorization'] = "RSA-SHA256 " . $signature;
         $return = $client->valid_signature($method, $url, $headers, $json_payload);
